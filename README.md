@@ -21,7 +21,7 @@ Frontend Technologies: The user interface is crafted using HTML, CSS, and JavaSc
 Java (Web Scraping)
 Spring Framework
 Hibernate
-MySQL/MariaDB
+MySQL
 
 ## Server-Side JavaScript:
 Node.js
