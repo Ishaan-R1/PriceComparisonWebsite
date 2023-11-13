@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Comparison Website</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="CSS/style.css" />
+    <!-- Link to font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Vue development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <!-- Link to JavaScript for Vue Router Library -->
+    <script src="https://unpkg.com/vue-router@3.0.0/dist/vue-router.js"></script>
+
+    <!-- Axios library -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
+</head>
+<body>
+    <body>
+        <div id="app">
+        <!-- Add background image -->
+        <img class="backgroundImg" src="Images/backgroundImg.jpg" alt="background Image" />
+        <!-- Style all content within wrapper-->
+        <div class="wrapper">
+            <div class="logo">
+                <!-- Add and style logo -->
+                <img src="Images/logo.png" alt="Logo" style="width:200px;height:100px;">
+              </div>
+              <div class="header">
+                <h1 style="color:black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Compare prices on products over multiple <br>websites</h1>
+                <!-- Add and style search bar -->
+                <div class="searchBar">
+                <div class="searchIcon">
+                  <i class="fa fa-search"></i>
+                  <!-- Add input field as search bar that recieves user input as search term -->
+                  <input type="text" class="input" v-model.trim="searchBar.searchInput" id="searchInput" placeholder="What product are you looking for?" />
+                  <!-- Perform function to search for phones on button click -->
+              <button v-on:click="search()" type="submit" class="btn">Search</button>
+                </div>
+              </div>
+                
+              </div>
+        </div>
+
+            <h1 class="phoneHeader">Samsung Phones</h1>
+            <div class="container" v-if="canViewProduct">
+                <!-- Loop through phones array to print out all data of a phone -->
+            <div class="card1" v-for="phone in phones">
+                <!-- Add and style image of a phone -->
+                <img class="img" v-bind:src="phone.img_url" style="width:250px; height:300px;">
+                <!-- Call function to compare product of a specific phone once user clicks on a phone -->
+                <a v-on:click="comparePhones(phone.id)" id="modelName">{{phone.model}}
+                    
+                <p><button>View Product</button></p>
+            </div>
+        </div>
+        <div class="paginationButtons">
+            <!-- Calculate how many pages there are -->
+            <div v-if="Math.ceil(numResults / numOfItemsPerPage) === 0">
+                <p>Page {{ currentPageNumber + 1}} of 87</p>
+              </div>
+              <div v-else>
+                <p>Page {{ currentPageNumber + 1}} of {{Math.ceil(numResults / numOfItemsPerPage)}}</p>
+              </div>
+                <!-- display two buttons to go back and forth between pages  -->
+                <button @click="prevPage" id="prevPg">Previous Page</button>   
+                <button @click="nextPage" id="nxtPg">Next Page</button>            
+        </div>
+        <!-- Display all details of a specific product once selected -->
+        <div class="container2" v-for="detail in productDetails">
+            <!-- v-else -->
+            <div class="productImgBg">
+                <!-- Add and style image of a phone -->
+                <img class="productImg" v-bind:src="detail.img_url" alt="S22 Ultra">
+              </div>
+                <!-- Add model of a phone -->
+                <div class="productName">
+                  <p>{{detail.model}}<br></p>
+                </div>
+                <div class="bdr">
+                <!-- Add description of a phone -->
+                  <p>{{detail.description}}<br></p>
+                </div>
+        </div>
+    <div class="container3">
+        <div class="shopCard" v-for="comparison in compare2">   
+            <img class="shopImg" v-bind:src="comparison.website_img" alt="Shop Image" style="float: left;">
+        <div class="shopTitleBdr">
+                <!-- display shop name of where a phone is from -->
+            <h1 class="shopTitle" >{{ comparison.website_name }} </h1> 
+        </div>
+        <div class="vl"></div>
+        <div class="prodTitleBdr">
+                <!-- display model of a phone -->
+            <h2 class="prodTitle">{{ comparison.model }}</h2>
+          </div>
+        <div class="shopPriceBdr">
+                <!-- display description of a phone -->
+                <div v-if="comparison.prices.includes('£')">
+                    <h1 class="shopPrice"> {{ comparison.prices }}</h1>
+                  </div>
+                  <div v-else>
+                    <h1 class="shopPrice"> £{{ comparison.prices }}</h1>
+                  </div>
+        </div>
+        <div class="visitBtn1Bdr">
+                <!-- button to redirect user to original website -->
+            <a v-bind:href="comparison.website_url" class="visitBtn1">
+                <p class="btnTxt">Visit</p>
+            </a>
+          </div>
+        </div>
+    </div>
+            <!-- Display footer with font awesome icons -->
+            <footer>
+                <div class="footer">
+                  <p>Ishaan Rahim &copy;<br></p>
+                  <!-- Add social media logos from font awesome library -->
+                  <a href="https://twitter.com/?lang=en" class="fa fa-twitter"></a>
+                  <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                  <a href="https://www.snapchat.com/" class="fa fa-snapchat"></a>
+                  <a href="https://www.youtube.com/" class="fa fa-youtube"></a>
+                  <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                </div>
+              </footer>
+        </div>
+
+    <!-- Link to js file -->
+    <script src="JavaScript/app.js"></script>
+
+</body>
+</html>

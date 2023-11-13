@@ -1,0 +1,578 @@
+/* Creating background colour for body */
+body {
+    background-color: #cccccc;
+    /* background-size: cover; */
+  }
+  /* Resizing background image */
+  .backgroundImg {
+    height: 605px;
+    width: 1550px;
+  }
+  /* Designing and positioning
+      content for header of page */
+  .wrapper {
+    position: relative;
+    left: 460px;
+    bottom: 300px;
+    transform: translate(-50%, -50%);
+    background: whitesmoke /* rgba(0, 0, 0, 0.6) */;
+    width: 780px;
+    height: 340px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    /* box-shadow: 5px 5px 8px black, 10px 10px 8px darkgray, 5px 5px 8px grey; */
+    box-shadow: 0 15px 40px 0px rgba(0.8, 0.8, 0.8, 800);
+
+  }
+  /* Designing and positioning
+      input fields */
+  .input {
+    width: 600px;
+    height: 60px;
+    position: absolute;
+    top: 70%;
+    /* border-color: rgba(0, 0, 0, 0.3); */
+    border: none;
+    outline: none;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-right: 0.5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+  }
+  .header {
+    position: absolute;
+    top: 18%;
+    font-size: 21px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  /* Designing and positioning
+      buttons */
+  .btn {
+    background-color: whitesmoke;
+    width: 120px;
+    height: 60px;
+    position: relative;
+    left: 610px;
+    bottom: -50px;
+    border-radius: 10px;
+    border: none;
+    border: 3px ridge red;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.8);
+    color: red;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
+  /* Styling font awesome icons */
+  form .fa-search, .searchIcon .fa-search{
+    align-self: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    left: 5.5px;
+    bottom: -43px;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    border-left: 0.5px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
+    height: 41.9px;
+  }
+  .searchBar {
+    position: relative;
+    right: 10px;
+    bottom: 50px;
+  }
+  .phoneHeader {
+    background-color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    bottom: -5%;
+    left: 2%;
+    width: 1000px;
+  }
+  /* Styling product card design */
+  .card1,
+  .card4,
+  .card5,
+  .card6 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 350px; 
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    /* border-radius: 20px; */
+    /* transform: translate(-111%, -90%); */
+    /* border: 1px solid black; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    /* height: 150px; */
+    /* padding: 30px; */
+    margin-right: 50px;
+    margin-bottom: 70px;
+    border-radius: 10px;
+  }
+  .s22U {
+    height: 160px;
+    width: 150px;
+  }
+  .s22U:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+  /* Styling price displayed when comparing */
+  .price,
+  .price2,
+  .price3,
+  .price4,
+  .price5,
+  .price6 {
+    color: grey;
+    font-size: 22px;
+  }
+  /* Styling button of product card */
+  .card1 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .card1 button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  
+  .card2 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    /* transform: translate(-111%, -90%); */
+    position: absolute;
+    top: 106.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    transform: translate(-111%, -90%); */
+  }
+  .card3 {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 450px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    /* transform: translate(-111%, -90%); */
+    position: absolute;
+    top: 105%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+  }
+  .s22 {
+    height: 100px;
+    width: 150px;
+  }
+  .price2 {
+    color: grey;
+    font-size: 22px;
+  }
+  .price3 {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card2 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  .card3 button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  /* Designing and positioning
+      container holding main content */
+  .container {
+    /* display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    bottom: 250px; */
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: auto;
+    width: 75%;
+    position: relative;
+    bottom: 270px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  /* style footer - colour and text style*/
+  .footer {
+    text-align: center;
+    background-color: #202020;
+    color: whitesmoke;
+  }
+  /* style social media icons on footer */
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-youtube,
+  .fa-twitter,
+  .fa-facebook {
+    background: #202020;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+  }
+  .fa-twitter:hover,
+  .fa-facebook:hover {
+    color: blue;
+  }
+  .fa-snapchat:hover {
+    color: yellow;
+  }
+  .fa-youtube:hover {
+    color: red;
+  }
+  .fa-instagram:hover {
+    color: purple;
+  }
+  /* .headerStyle {
+    font-family: Arial, Helvetica, sans-serif;
+  } */
+  .topnav {
+    overflow: hidden;
+    background-color: #232323;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the "active" element to highlight the current page */
+  .topnav a.active {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  /* Style the search box inside the navigation bar */
+  .topnav input[type="text"] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 20px;
+    margin-right: 16px;
+    font-size: 17px;
+    height: 50px;
+    width: 1000px;
+    border-radius: 100px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    outline: none;
+  }
+  /* Style search button */
+  .topnav button[type="submit"] {
+    background-color: red;
+    width: 120px;
+    height: 62.7px;
+    position: relative;
+    left: -15.5px;
+    top: 20px;
+    border-radius: 100px;
+    border: none;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.8);
+    color: black;
+    font-size: 15px;
+    font-weight: bolder;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    cursor: pointer;
+  }
+  .container2 {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    border: 1px solid black;
+    margin: auto;
+    width: 90%;
+    height: 400px;
+  }
+  .container3 {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    /* border: 1px solid red ;  */
+    margin: auto;
+    width: 90%;
+  }
+  /* Style image of phone selected */
+  .productImg {
+    height: 350px;
+    width: 350px;
+    position: relative;
+    text-align: left;
+  }
+  /* Style and resize background image of phone selected */
+  .productImgBg {
+    height: 350px;
+    width: 350px;
+    border: 3px solid gray;
+    background-color: gray;
+    position: relative;
+    text-align: left;
+  }
+  .productImg:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  /* Style product model when selected */
+  .productName {
+    /* border: 1px solid blue; */
+    width: 4000px;
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+    font-size: 40px;
+  }
+  .bdr {
+    /* border: 1px solid blue; */
+    width: 7500px;
+    position: relative;
+    top: 75px;
+    right: 250px;
+    font-size: 27px;
+  }
+  .shopCard {
+    border: 1px solid rgb(160,160,160);
+    border-radius: 10px;
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+  }
+  /* Style image of shop */
+  .shopImg {
+    height: 100px;
+    width: 160px;
+    border: 1px solid rgb(160,160,160);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: relative;
+    /* bottom: 22px; */
+  }
+  /* Style shop name element */
+  .shopTitle {
+    /* border: 1px solid black; */
+    margin: auto;
+    width: 90%;
+    /* position: relative;
+    left: 10px; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+  
+  }
+  /* Style phone model element */
+  .prodTitle {
+    margin: auto;
+    width: 90%;
+    position: relative;
+    right: 135px;
+    /* bottom: 40px; */
+  }
+  /* Style price element */
+  .shopPrice {
+    margin: auto;
+    width: 90%;
+    color: grey;
+  
+    /* position: relative;
+    left: 150px;
+    bottom: 40px;   */
+  }
+  .visitBtn1Bdr {
+    border: 1px solid rgb(160,160,160);
+    width: 150px;
+    height: 99px;
+    position: relative;
+    left: 1200px;
+    bottom: 167px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+  
+  }
+  /* Styling button that enables user 
+      to visit original website */
+  .visitBtn1 {
+    background-color: red;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 1);
+    border: 3px ridge darkred;
+  }
+  
+  .visitBtn1:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+  }
+  .btnTxt {
+    font-size: larger;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  /* Style border containing shop name */
+  .shopTitleBdr {
+    border: 1px solid 	rgb(160,160,160);
+    width: 200px;
+    height: 100px;
+    position: relative;
+    left: 160px;
+    border-left: none;
+    border-top: none;
+    border-bottom: none;
+  }
+  /* Style border containing phone model */
+  .prodTitleBdr {
+    border: 1px solid 	rgb(160,160,160);
+    position: relative;
+    left: 360px;
+    bottom: 90px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 840px;
+  
+  }
+  /* Style border containing price */
+  .shopPriceBdr {
+    border: 1px solid 	rgb(160,160,160);
+    position: relative;
+    left: 320px;
+    bottom: 90px;  
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  
+  }
+  h1, h2 {
+    color:black; font-family: Arial, Helvetica, sans-serif;
+  }
+  /* .vl {
+    border-left: 1px solid green;
+    height: 50px;
+    position: relative;
+    left: 100px;
+  } */
+  .btn2 {
+    background-color: whitesmoke;
+    width: 120px;
+    height: 60px;
+    position: relative;
+    left: 1010px;
+    bottom: -50px;
+    border-radius: 10px;
+    border: none;
+    border: 3px ridge red;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.8);
+    color: red;
+    font-size: 15px;
+    font-weight: bolder;
+  }
+  .paginationButtons {
+    position: relative;
+    bottom: 300px;
+  }
+  /* Style next and previous page buttons */
+  #nxtPg, #prevPg {
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 10px;
+    color: #2196f3;
+  }
+  #nxtPg:hover, #prevPg:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+  /* Style phone images on product cards */
+  .img {
+    border-radius: 10px;
+  }
